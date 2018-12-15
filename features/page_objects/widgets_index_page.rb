@@ -6,6 +6,6 @@ class WidgetsIndex
   end
 
   def visit
-    @browser.get(@domain + "/widgets")
+    @browser.goto(@domain + "/widgets")
   end
 end
