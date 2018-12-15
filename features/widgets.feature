@@ -7,4 +7,4 @@ Feature: FSAR Watir Scenarios
     Then I should be on the new widgets page
     When I enter a valid widget
     Then I should be on the widgets page
-    # And I DELETE my widgets via the API
+    And I DELETE my widgets via the API
