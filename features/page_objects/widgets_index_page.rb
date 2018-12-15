@@ -6,6 +6,10 @@ class WidgetsIndex
   end
 
   def visit
-    @browser.goto(@domain + "/widgets")
+    @browser.goto(@domain + '/widgets')
+  end
+
+  def new_widget
+    @browser.link text: 'New Widget'
   end
 end

@@ -2,12 +2,19 @@ Given /I am on the fsar widgets page/ do
   @widgets_index.visit
 end
 
-Given(/^I am on the new widget page$/) do
-  @widget_new.visit(@fsar_api_key)
+And /I click the New Widget link/i do
+  @widgets_index.new_widget.click
 end
 
-Given /I create a new widget/i do
-  @widget_new.name.send_keys("BOT_DATA_WidgetName#{rand(999).to_s}")
-  @widget_new.description.send_keys("BOT_DATA_WidgetDescription")
-  @widget_new.widget_form.submit
+Then /I should be on the new widgets page/i do
+  expect(@browser.url).to include('/widgets/new')
+end
+
+And /I enter a valid widget/i do
+  @widget_new.name("CukeHub")
+  @widget_new.create_widget.click
+end
+
+Then /I should be on the widgets page/i do
+  expect(@browser.url).to include('/widgets')
 end

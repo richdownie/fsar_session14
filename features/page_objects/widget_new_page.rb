@@ -5,21 +5,14 @@ class WidgetNew
     @domain = domain
   end
 
-  def visit(key)
-    raise "Please add your fsar api key to the features/support/env.rb file" unless key != "replace_with_your_fsar_api_key"
-    @browser.get(@domain + "/widgets/new?fsar_api_key=#{key}")
+  def name(value)
+    name = @browser.text_field id: 'widget_name'
+    name.exists?
+    name.set value
   end
 
-  def name
-    @browser.first(id: 'widget_name')
-  end
-
-  def description
-    @browser.first(id: 'widget_description')
-  end
-
-  def widget_form
-    @browser.first(name: 'commit')
+  def create_widget
+    @browser.button value: 'Create Widget'
   end
 
 end
