@@ -7,12 +7,11 @@ Before do
   # Watir::Browser.new :edge
   # Watir::Browser.new :safari
 
-  @fsar_api_key = "ciDvjUhMyLDTSD5T"
+  @fsar_api_key = ""
   if @fsar_api_key.empty?
     puts "1. Please Sign In https://fullstackautomationwithruby.com/users/sign_in."
     puts "2. Visit your PROFILE page."
     puts "3. Copy and paste your @fsar_api_key in features/support/env.rb."
   end
-  # @domain = 'https://fullstackautomationwithruby.com'
-  @domain = 'http://localhost:3000'
+  @domain = 'https://fullstackautomationwithruby.com'
 end
