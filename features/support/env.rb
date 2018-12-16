@@ -2,10 +2,10 @@ Before do
   @browser = Watir::Browser.new  #Chrome is the default
 
   #You can try these other browsers
-  # Watir::Browser.new :firefox
-  # Watir::Browser.new :internet_explorer
-  # Watir::Browser.new :edge
-  # Watir::Browser.new :safari
+  # @browser = Watir::Browser.new :firefox
+  # @browser = Watir::Browser.new :internet_explorer
+  # @browser = Watir::Browser.new :edge
+  # @browser = Watir::Browser.new :safari
 
   @fsar_api_key = ""
   if @fsar_api_key.empty?
