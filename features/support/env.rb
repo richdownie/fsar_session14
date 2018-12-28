@@ -1,6 +1,5 @@
 Before do
   @browser = Watir::Browser.new  #Chrome is the default
-
   #You can try these other browsers
   # @browser = Watir::Browser.new :firefox
   # @browser = Watir::Browser.new :internet_explorer
